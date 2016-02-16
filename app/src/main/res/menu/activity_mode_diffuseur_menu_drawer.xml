@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <!--Pour ajouter un icône
+        android:icon="@drawable/ic_menu_camera"-->
+
+        <item
+            android:id="@+id/accueil_mode_diffuseur"
+            android:icon="@drawable/ic_drawer_home"
+            android:title="@string/option_1_accueil" />
+
+        <item
+            android:id="@+id/bibliotheque_mode_diffuseur"
+            android:icon="@drawable/ic_drawer_albums"
+            android:title="@string/option_2_bibliotheque" />
+
+        <item
+            android:id="@+id/mes_listes_de_lecture_mode_diffuseur"
+            android:icon="@drawable/ic_drawer_playlists"
+            android:title="@string/option_5_mes_listes_de_lecture" />
+
+    </group>
+</menu>

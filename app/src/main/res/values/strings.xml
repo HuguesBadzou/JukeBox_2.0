@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Jukebox 2.0</string>
+    <string name="texte_bouton_diffuseur">Diffuseur</string>
+    <string name="texte_bouton_participant">Participant</string>
+    <string name="title_activity_accueil_diffuseur">AccueilDiffuseur</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <!-- Menu -->
+    <string name="menu_option_reglages">Réglages</string>
+    <string name="menu_option_mon_compte">Mon Compte</string>
+
+
+    <string name="title_activity_accueil_participant">Accueil Participant</string>
+
+    <!-- Options des utilisateur -->
+    <string name="option_1_accueil">Accueil</string>
+    <string name="option_2_artistes">Artistes</string>
+    <string name="option_2_bibliotheque">Ma musique</string>
+    <string name="option_3_albums">Albums</string>
+    <string name="option_4_chansons">Chansons</string>
+    <string name="option_5_mes_listes_de_lecture">Partager liste de lecture</string>
+    <string name="option_6_diffuser_playlist">Diffuser liste de lecture</string>
+    <string name="option_6_rejoindre_playlist">Rejoindre liste de lecture</string>
+    <string name="option_7_changer_de_mode">Changer de mode</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="texte_fragment_Accueil">Fragment Accueil</string>
+    <string name="texte_fragment_artistes">Aucun artiste disponible</string>
+    <string name="texte_fragment_albums">Aucun album disponible</string>
+    <string name="texte_fragment_chansons">Aucune chanson disponible</string>
+    <string name="texte_fragment_liste_de_lecture">Aucune liste de lecture disponible</string>
+    <string name="title_activity_mode_diffuseur">Mode Diffuseur</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_mode_participant">Mode Participant</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_tab_diffuseur">TabDiffuseurActivity</string>
+    <string name="title_activity_activity_diffusion">ActivityDiffusion</string>
+    <string name="title_activity_activity_rejoindre">ActivityRejoindre</string>
+
+    <!-- Menu contextuel création de liste de lecture -->
+    <string name="texte_ajout_nouvelle_playlist">Ajouter à une Liste de Lecture</string>
+    <string name="texte_creation_liste_lecture">Créer une Nouvelle PlayList</string>
+    <string name="texte_aller_a_page_artiste">Aller à la page Artiste</string>
+    <string name="texte_aller_a_page_album">Aller à la page Album</string>
+    <string name="texte_supprimer_musique">Supprimer de la liste</string>
+    <string name="texte_ajout_nouvelle_musique">Ajouter une Musique</string>
+    <string name="title_activity_test">Test</string>
+
+</resources>

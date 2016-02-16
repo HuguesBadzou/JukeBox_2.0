@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="m1geii.com.testwifip2p.Participants.InterfaceList">
+
+    <ListView
+        android:id="@+id/liste_musiques_votes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bouton_flottant_voter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_done_white_24dp"
+        app:backgroundTint="#4CAF50"
+        android:clickable="true"/>
+
+        <!--<Button
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:text="Voter "
+            android:id="@+id/partager"
+            android:gravity="center"
+            android:layout_gravity="center" />-->
+</FrameLayout>

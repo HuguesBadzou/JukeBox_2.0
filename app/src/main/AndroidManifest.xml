@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="m1geii.com.jukebox2_0">
+    // Permissions
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.bilthon.ufrj.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Pour continuer la musique si écran en veille -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Services utilisés par l'application -->
+        <service android:name="masterigis.com.jukebox2_0.MusicService" />
+
+        <activity android:name="masterigis.com.jukebox2_0.Choix_modes"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="masterigis.com.jukebox2_0.Mode_Diffuseur"
+            android:label="@string/title_activity_mode_diffuseur"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            // Pour indiquer que c'est cette activité qui se lancera au démarrage
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </activity>
+        <activity
+            android:name="masterigis.com.jukebox2_0.Diffuser_Liste_Playlist"
+            android:label="@string/title_activity_activity_diffusion"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="masterigis.com.jukebox2_0.Ajouter_Musique"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="masterigis.com.jukebox2_0.Diffuseur.Serveur"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="masterigis.com.jukebox2_0.Diffuseur.InterfacePartage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="masterigis.com.jukebox2_0.Participant.InterfaceList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="masterigis.com.jukebox2_0.Participant.Rejoindre_Playlist"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

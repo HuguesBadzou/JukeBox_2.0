@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="m1geii.com.testwifip2p.Diffuseur.InterfacePartage">
+
+    <FrameLayout
+        android:id="@+id/layout_votes"
+        android:layout_width="match_parent"
+        android:layout_height="445dp"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin">
+        <ListView
+            android:id="@+id/liste_musiques_votes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/bouton_flottant_lancer_musique"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_media_play"
+            android:clickable="true"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/conteneur_commandes_lecture"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+    </FrameLayout>
+</RelativeLayout>

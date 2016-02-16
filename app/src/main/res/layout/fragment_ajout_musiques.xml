@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="masterigis.com.jukebox2_0.Fragments.Fragment_Ajout_Musiques">
+
+    <ListView
+        android:id="@+id/listview_chansons_a_ajouter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="false" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bouton_flottant_valider_musiques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_list_white_24dp"
+        android:clickable="true"/>
+
+</FrameLayout>

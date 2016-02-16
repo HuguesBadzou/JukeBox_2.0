@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/SupprimerListeLecture"
+          android:title="Supprimer la liste de lecture"/>
+    <!--
+    <item
+        android:id="@+id/RenommerListeLecture"
+        android:title="Renommer la liste de lecture"/> -->
+
+    <item android:id="@+id/PartageListeLecture"
+          android:title="Partager la liste de lecture"/>
+</menu>

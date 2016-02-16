@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--
+    <item
+        android:id      ="@+id/AllerAPageArtiste"
+        android:title   ="@string/texte_aller_a_page_artiste"
+        />
+
+    <item
+        android:id      ="@+id/AllerAPageAlbum"
+        android:title   ="@string/texte_aller_a_page_album"
+        />
+
+        -->
+    <item
+        android:id      ="@+id/SuppressionChanson"
+        android:title   ="@string/texte_supprimer_musique"
+        />
+
+</menu>
