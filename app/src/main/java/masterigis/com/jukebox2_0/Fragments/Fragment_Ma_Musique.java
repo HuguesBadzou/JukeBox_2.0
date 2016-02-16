@@ -22,7 +22,7 @@ public class Fragment_Ma_Musique extends Fragment {
     public static ViewPager mviewPager;
     public static int nb_section = 4 ;
 
-
+///////////////////////////Hendrix
 
     public Fragment_Ma_Musique(){
 
