@@ -30,9 +30,12 @@ public class Choix_modes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choix_modes);
 
+
+
         Button boutonDiffuseur=(Button)findViewById(R.id.boutonDiffuseur);
         Button boutonParticipant=(Button)findViewById(R.id.boutonParticipant);
         final WifiManager wifi=(WifiManager)this.getSystemService(Context.WIFI_SERVICE);
+        final Bundle choixModeRecup=getIntent().getExtras();
 
         /////////// Vérification des permissions DEBUT ///////////
 
@@ -47,17 +50,22 @@ public class Choix_modes extends AppCompatActivity {
         boutonDiffuseur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(permission) {
-                    Intent a = new Intent(Choix_modes.this, Mode_Diffuseur.class);
-                    startActivity(a);
+
+                if (choixModeRecup.get("mode").equals("modeNonConnecte")) {
+                    if (permission) {
+                        Intent a = new Intent(Choix_modes.this, Mode_Diffuseur.class);
+                        startActivity(a);
+                    } else {
+                        new AlertDialog.Builder(Choix_modes.this)
+                                .setMessage("Vous devez autoriser la permission d'accès aux données du téléphone")
+                                .setPositiveButton("OK", null)
+                                .create()
+                                .show();
+                    }
                 }
 
                 else{
-                    new AlertDialog.Builder(Choix_modes.this)
-                            .setMessage("Vous devez autoriser la permission d'accès aux données du téléphone")
-                            .setPositiveButton("OK", null)
-                            .create()
-                            .show();
+                    // Faire la redirection vers une autre activité
                 }
             }
         });
@@ -65,9 +73,16 @@ public class Choix_modes extends AppCompatActivity {
         boutonParticipant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(Choix_modes.this, Rejoindre_Playlist.class);
-                wifi.setWifiEnabled(true);
-                startActivity(b);
+
+                if(choixModeRecup.get("mode").equals("modeNonConnecte")) {
+                    Intent b = new Intent(Choix_modes.this, Rejoindre_Playlist.class);
+                    wifi.setWifiEnabled(true);
+                    startActivity(b);
+                }
+
+                else{
+                    // Faire la direction vers une autre activité
+                }
             }
         });
     }

@@ -6,14 +6,14 @@
     tools:context="masterigis.com.jukebox2_0.Accueil">
 
     <Button
-        android:id="@+id/Bouton_mode_non_connecte"
+        android:id="@+id/bouton_mode_non_connecte"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
         android:text="@string/texte_bouton_mode_non_connecte"/>
 
     <Button
-        android:id="@+id/Bouton_mode_connecte"
+        android:id="@+id/bouton_mode_connecte"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
