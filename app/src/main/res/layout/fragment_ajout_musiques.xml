@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="masterigis.com.jukebox2_0.Fragments.Fragment_Ajout_Musiques">
+    tools:context="masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Ajout_Musiques">
 
     <ListView
         android:id="@+id/listview_chansons_a_ajouter"

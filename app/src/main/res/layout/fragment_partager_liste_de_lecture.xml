@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="masterigis.com.jukebox2_0.Fragments.Fragment_Partager_Liste_De_Lecture">
+    tools:context="masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Partager_Liste_De_Lecture">
 
     <ListView
         android:id="@+id/listview_listes_de_lecture_a_partager"

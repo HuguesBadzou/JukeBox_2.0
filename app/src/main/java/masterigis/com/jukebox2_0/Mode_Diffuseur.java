@@ -12,9 +12,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import m1geii.com.jukebox2_0.R;
-import masterigis.com.jukebox2_0.Fragments.Fragment_Ma_Musique;
-import masterigis.com.jukebox2_0.Fragments.Fragment_Music_Playback;
-import masterigis.com.jukebox2_0.Fragments.Fragment_Partager_Liste_De_Lecture;
+import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Ma_Musique;
+import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Music_Playback;
+import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Partager_Liste_De_Lecture;
 
 public class Mode_Diffuseur extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

@@ -24,21 +24,24 @@
         <!-- Services utilisés par l'application -->
         <service android:name="masterigis.com.jukebox2_0.MusicService" />
 
-        <activity android:name="masterigis.com.jukebox2_0.Choix_modes"
-                  android:screenOrientation="portrait">
+        <activity android:name="masterigis.com.jukebox2_0.Accueil"
+                  android:theme="@style/AppThemeFullScreen">
+            // To launch this activity at the launch of app
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
+        <activity
+            android:name="masterigis.com.jukebox2_0.Choix_modes"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="masterigis.com.jukebox2_0.Mode_Diffuseur"
             android:label="@string/title_activity_mode_diffuseur"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
-
-            // Pour indiquer que c'est cette activité qui se lancera au démarrage
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            </activity>
+        </activity>
         <activity
             android:name="masterigis.com.jukebox2_0.Diffuser_Liste_Playlist"
             android:label="@string/title_activity_activity_diffusion"
@@ -48,16 +51,16 @@
             android:name="masterigis.com.jukebox2_0.Ajouter_Musique"
             android:screenOrientation="portrait" />
         <activity
-            android:name="masterigis.com.jukebox2_0.Diffuseur.Serveur"
+            android:name="masterigis.com.jukebox2_0.ModeNonConnecte.Diffuseur.Serveur"
             android:screenOrientation="portrait" />
         <activity
-            android:name="masterigis.com.jukebox2_0.Diffuseur.InterfacePartage"
+            android:name="masterigis.com.jukebox2_0.ModeNonConnecte.Diffuseur.InterfacePartage"
             android:screenOrientation="portrait" />
         <activity
-            android:name="masterigis.com.jukebox2_0.Participant.InterfaceList"
+            android:name="masterigis.com.jukebox2_0.ModeNonConnecte.Participant.InterfaceList"
             android:screenOrientation="portrait" />
         <activity
-            android:name="masterigis.com.jukebox2_0.Participant.Rejoindre_Playlist"
+            android:name="masterigis.com.jukebox2_0.ModeNonConnecte.Participant.Rejoindre_Playlist"
             android:screenOrientation="portrait" />
     </application>
 

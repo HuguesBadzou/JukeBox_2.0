@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import m1geii.com.jukebox2_0.R;
-import masterigis.com.jukebox2_0.Participant.Rejoindre_Playlist;
+import masterigis.com.jukebox2_0.ModeNonConnecte.Participant.Rejoindre_Playlist;
 
 public class Choix_modes extends AppCompatActivity {
 

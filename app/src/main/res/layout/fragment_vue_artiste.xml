@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="masterigis.com.jukebox2_0.Fragments.Fragment_Vue_Artiste">
+    tools:context="masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Vue_Artiste">
 
     <ListView
         android:id="@+id/listView_vue_artiste"
