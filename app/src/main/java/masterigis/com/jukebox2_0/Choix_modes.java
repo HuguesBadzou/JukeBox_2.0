@@ -67,6 +67,22 @@ public class Choix_modes extends AppCompatActivity {
                 else{
                     // Faire la redirection vers une autre activité
                 }
+                if (choixModeRecup.get("mode").equals("modeConnecte")) {
+                    if (permission) {
+                        Intent c = new Intent(Choix_modes.this, Mode_DiffuseurCo.class);
+                        startActivity(c);
+                    } else {
+                        new AlertDialog.Builder(Choix_modes.this)
+                                .setMessage("Vous devez autoriser la permission d'accès aux données du téléphone")
+                                .setPositiveButton("OK", null)
+                                .create()
+                                .show();
+                    }
+                }
+
+                else{
+                    // Faire la redirection vers une autre activité
+                }
             }
         });
 
@@ -80,8 +96,10 @@ public class Choix_modes extends AppCompatActivity {
                     startActivity(b);
                 }
 
-                else{
-                    // Faire la direction vers une autre activité
+                if(choixModeRecup.get("mode").equals("modeConnecte")) {
+                    Intent d = new Intent(Choix_modes.this, Mode_Participant.class);
+                    wifi.setWifiEnabled(true);
+                    startActivity(d);
                 }
             }
         });

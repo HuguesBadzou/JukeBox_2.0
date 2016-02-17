@@ -62,6 +62,16 @@
         <activity
             android:name="masterigis.com.jukebox2_0.ModeNonConnecte.Participant.Rejoindre_Playlist"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="masterigis.com.jukebox2_0.Mode_DiffuseurCo"
+            android:label="@string/title_activity_mode_diffuseurCo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="masterigis.com.jukebox2_0.Mode_Participant"
+            android:label="@string/title_activity_mode_participantCo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
