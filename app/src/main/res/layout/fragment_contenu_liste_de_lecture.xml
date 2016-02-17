@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="masterigis.com.jukebox2_0.Fragments.Fragment_contenu_liste_de_lecture">
+    tools:context="masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_contenu_liste_de_lecture">
 
     <ListView
         android:id="@+id/liste_des_musiques"

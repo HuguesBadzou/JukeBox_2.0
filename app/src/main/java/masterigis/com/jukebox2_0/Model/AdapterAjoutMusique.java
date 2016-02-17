@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import m1geii.com.jukebox2_0.R;
 import masterigis.com.jukebox2_0.Ajouter_Musique;
-import masterigis.com.jukebox2_0.Fragments.Fragment_Ajout_Musiques;
+import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Ajout_Musiques;
 
 /**
  * Created by naveck on 21/01/2016.
