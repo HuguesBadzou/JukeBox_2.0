@@ -25,6 +25,8 @@
     <string name="option_3_albums">Albums</string>
     <string name="option_4_chansons">Chansons</string>
     <string name="option_5_mes_listes_de_lecture">Partager liste de lecture</string>
+    <string name="option_5_rechercher_evenement">Rechercher un évenement</string>
+    <string name="option_5_evenements">Partager Evenement</string>
     <string name="option_6_diffuser_playlist">Diffuser liste de lecture</string>
     <string name="option_6_rejoindre_playlist">Rejoindre liste de lecture</string>
     <string name="option_7_changer_de_mode">Changer de mode</string>
@@ -38,8 +40,10 @@
     <string name="texte_fragment_chansons">Aucune chanson disponible</string>
     <string name="texte_fragment_liste_de_lecture">Aucune liste de lecture disponible</string>
     <string name="title_activity_mode_diffuseur">Mode Diffuseur</string>
+    <string name="title_activity_mode_diffuseurCo">Mode Diffuseur Connecté</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_mode_participant">Mode Participant</string>
+    <string name="title_activity_mode_participantCo">Mode Participant Connecté</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_tab_diffuseur">TabDiffuseurActivity</string>
     <string name="title_activity_activity_diffusion">ActivityDiffusion</string>
@@ -47,6 +51,7 @@
 
     <!-- Menu contextuel création de liste de lecture -->
     <string name="texte_ajout_nouvelle_playlist">Ajouter à une Liste de Lecture</string>
+    <string name="texte_ajout_nouvel_evenement">Proposer pour un évenement</string>
     <string name="texte_creation_liste_lecture">Créer une Nouvelle PlayList</string>
     <string name="texte_aller_a_page_artiste">Aller à la page Artiste</string>
     <string name="texte_aller_a_page_album">Aller à la page Album</string>

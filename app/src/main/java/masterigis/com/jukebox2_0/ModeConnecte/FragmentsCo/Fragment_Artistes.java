@@ -17,7 +17,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import m1geii.com.jukebox2_0.R;
-import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Vue_Artiste;
+import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Vue_Artiste;
 import masterigis.com.jukebox2_0.Model.AdapterArtistes;
 import masterigis.com.jukebox2_0.Model.Artiste;
 
