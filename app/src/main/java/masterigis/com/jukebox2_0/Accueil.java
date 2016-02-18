@@ -10,6 +10,7 @@ import m1geii.com.jukebox2_0.R;
 
 public class Accueil extends AppCompatActivity {
 
+    // Test Mahafous
     Bundle mode=new Bundle();
 
     @Override
