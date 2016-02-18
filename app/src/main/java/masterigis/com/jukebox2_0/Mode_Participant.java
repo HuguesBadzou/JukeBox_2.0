@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 import m1geii.com.jukebox2_0.R;
 import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Bibliotheque;
+import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Upload;
 import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Ma_Musique;
 import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Music_Playback;
 import masterigis.com.jukebox2_0.ModeNonConnecte.Participant.Rejoindre_Playlist;
@@ -121,9 +122,15 @@ public class Mode_Participant extends AppCompatActivity
                 break;
 
             case R.id.rejoindre_playlist:
-                Intent i=new Intent (Mode_Participant.this,Rejoindre_Playlist.class);
+                /*Intent i=new Intent (Mode_Participant.this,Rejoindre_Playlist.class);
                 startActivity(i);
-                break;
+                break;*/
+
+                fragment = new Fragment_Upload();
+                ft.replace(R.id.mainFrame, fragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .addToBackStack(null)
+                        .commit();
 
         }
 
