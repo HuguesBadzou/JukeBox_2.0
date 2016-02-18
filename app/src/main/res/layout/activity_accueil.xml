@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_choix_modes_dark"
     tools:context="masterigis.com.jukebox2_0.Accueil">
 
     <Button
@@ -10,6 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_ripple"
+        android:textSize="20sp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
         android:text="@string/texte_bouton_mode_non_connecte"/>
 
     <Button
@@ -17,6 +25,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/custom_ripple"
+        android:textSize="20sp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
         android:text="@string/texte_bouton_mode_connecte"/>
 
 </LinearLayout>

@@ -1,6 +1,7 @@
 package masterigis.com.jukebox2_0;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,6 +21,10 @@ public class Accueil extends AppCompatActivity {
 
         Button boutonModeConnecte=(Button)findViewById(R.id.bouton_mode_connecte);
         Button boutonModeNonConnecte=(Button)findViewById(R.id.bouton_mode_non_connecte);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/HelveticaNeue.ttf");
+        boutonModeConnecte.setTypeface(typeface);
+        boutonModeNonConnecte.setTypeface(typeface);
 
         boutonModeNonConnecte.setOnClickListener(new View.OnClickListener() {
             @Override
