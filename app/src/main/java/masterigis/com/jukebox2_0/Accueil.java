@@ -29,7 +29,7 @@ public class Accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mode.putString("mode","modeNonConnecte");
-                Intent a=new Intent(Accueil.this,Choix_modes.class);
+                Intent a=new Intent(Accueil.this,Choix_roles.class);
                 a.putExtras(mode);
                 startActivity(a);
             }
@@ -39,7 +39,7 @@ public class Accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mode.putString("mode","modeConnecte");
-                Intent b=new Intent(Accueil.this,Choix_modes.class);
+                Intent b=new Intent(Accueil.this,GoogleSignIn.class);
                 b.putExtras(mode);
                 startActivity(b);
             }
