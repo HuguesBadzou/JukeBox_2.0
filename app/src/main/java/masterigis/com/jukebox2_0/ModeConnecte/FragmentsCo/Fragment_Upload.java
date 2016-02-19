@@ -40,7 +40,7 @@ public class Fragment_Upload extends Fragment {
     /**
      * Le lien du script, qu'on appellera pour uploader notre fichier
      */
-    private static final String URL_UPLOAD = "http://jukebox2_0.olympe.in/SERVEUR/upload.php";
+    private static final String URL_UPLOAD = "http://jukeboxv20.olympe.in/serveur/upload.php";
 
     private final OkHttpClient client = new OkHttpClient();
 
