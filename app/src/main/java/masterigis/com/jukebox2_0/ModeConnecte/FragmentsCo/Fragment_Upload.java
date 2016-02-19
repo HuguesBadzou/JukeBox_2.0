@@ -31,6 +31,7 @@ import java.io.IOException;
 import is.arontibo.library.ElasticDownloadView;
 import m1geii.com.jukebox2_0.R;
 import masterigis.com.jukebox2_0.CountingFileRequestBody;
+import masterigis.com.jukebox2_0.Mode_Participant;
 
 import static android.os.Looper.getMainLooper;
 
@@ -83,7 +84,7 @@ public class Fragment_Upload extends Fragment {
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent i = new Intent(getContext(), FilePickerActivity.class);
+               Intent i = new Intent(getContext(), FilePickerActivity.class);
 
                 // On ne permet que la sélection de UN seul fichier
                 i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false);
@@ -97,6 +98,11 @@ public class Fragment_Upload extends Fragment {
                 i.putExtra(FilePickerActivity.EXTRA_START_PATH, Environment.getExternalStorageDirectory().getPath());
 
                 startActivityForResult(i, FILE_CODE);
+
+              /*  ///Test
+                Intent intent=new Intent(getContext(),Mode_Participant.class);
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE,false);
+                startActivity(intent);*/
             }
         });
 
