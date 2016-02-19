@@ -20,6 +20,11 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:text="@string/texte_bouton_mode_non_connecte"/>
 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#125081"/>
+
     <Button
         android:id="@+id/bouton_mode_connecte"
         android:layout_width="match_parent"
