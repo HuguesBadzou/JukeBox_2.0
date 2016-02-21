@@ -1,6 +1,7 @@
 package masterigis.com.jukebox2_0;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import m1geii.com.jukebox2_0.R;
 public class Accueil extends AppCompatActivity {
 
     Bundle mode=new Bundle();
+    SharedPreferences infos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,10 @@ public class Accueil extends AppCompatActivity {
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/HelveticaNeue.ttf");
         boutonModeConnecte.setTypeface(typeface);
         boutonModeNonConnecte.setTypeface(typeface);
+
+        // Partie shared preferences
+        infos=this.getSharedPreferences(".siConnecte",MODE_PRIVATE);
+        final String siConnecte = infos.getString("etat","");
 
         boutonModeNonConnecte.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,10 +44,18 @@ public class Accueil extends AppCompatActivity {
         boutonModeConnecte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mode.putString("mode","modeConnecte");
-                Intent b=new Intent(Accueil.this,GoogleSignIn.class);
-                b.putExtras(mode);
-                startActivity(b);
+                mode.putString("mode", "modeConnecte");
+                if(siConnecte.equals("dejaConnecte")) {
+                    Intent b = new Intent(Accueil.this, Choix_roles.class);
+                    b.putExtras(mode);
+                    startActivity(b);
+                }
+
+                else {
+                    Intent b = new Intent(Accueil.this, GoogleSignIn.class);
+                    b.putExtras(mode);
+                    startActivity(b);
+                }
             }
         });
     }

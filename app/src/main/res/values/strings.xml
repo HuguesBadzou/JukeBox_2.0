@@ -13,8 +13,11 @@
     <string name="menu_option_mon_compte">Mon Compte</string>
 
     <!-- Page d'accueil -->
-    <string name="texte_bouton_mode_connecte">Mode connecté:\nPartagez les musiques que vous aimez en les envoyant au Diffuseur (nécessite une connection internet)</string>
+    <string name="texte_bouton_mode_connecte">Mode connecté:\nPartagez les musiques que vous aimez en les envoyant au Diffuseur (nécessite une connexion internet)</string>
     <string name="texte_bouton_mode_non_connecte">Mode non connecté:\nVotez pour les musiques que vous aimez en vous connectant en Wi-Fi Direct au Diffuseur</string>
+
+    <!-- Page Google Sign In -->
+    <string name="texte_connexion_google">Connectez-vous avec Google</string>
 
     <string name="title_activity_accueil_participant">Accueil Participant</string>
 

@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <!-- Pour continuer la musique si écran en veille -->
     <application
@@ -26,7 +27,8 @@
 
         <activity
             android:name="masterigis.com.jukebox2_0.Accueil"
-            android:theme="@style/AppThemeFullScreen">
+            android:theme="@style/AppThemeFullScreen"
+            android:screenOrientation="portrait">
             // To launch this activity at the launch of app
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +36,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name="masterigis.com.jukebox2_0.GoogleSignIn"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen"/>
+
         <activity
             android:name="masterigis.com.jukebox2_0.Choix_roles"
             android:screenOrientation="portrait" />
@@ -41,7 +49,7 @@
             android:name="masterigis.com.jukebox2_0.Mode_Diffuseur"
             android:label="@string/title_activity_mode_diffuseur"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name="masterigis.com.jukebox2_0.Diffuser_Liste_Playlist"
             android:label="@string/title_activity_activity_diffusion"
@@ -71,8 +79,7 @@
             android:name="masterigis.com.jukebox2_0.Mode_Participant"
             android:label="@string/title_activity_mode_participantCo"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="masterigis.com.jukebox2_0.GoogleSignIn"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
