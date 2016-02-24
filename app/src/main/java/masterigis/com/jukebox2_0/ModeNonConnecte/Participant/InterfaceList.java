@@ -57,7 +57,7 @@ public class InterfaceList extends AppCompatActivity {
         setTitle("Client");
         image_details = getListData();
 
-        connectionfilter = new IntentFilter(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION); // Indique si  l'ÃƒÂ©tat de la connexion Wi-Fi peer to peer a changÃƒÂ©
+        connectionfilter = new IntentFilter(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION); // Indique si  l'état de la connexion Wi-Fi peer to peer a changÃƒÂ©
 
         initializeWiFiDirect();
         Log.i("msg ", " ProgressDialogConnexion");
@@ -65,13 +65,13 @@ public class InterfaceList extends AppCompatActivity {
 
         //modification syteme du vote
         final CharSequence[] items = {
-                "1 er ", "2 Ã¨me ",
-                "3 Ã¨me ", "4 Ã¨me ",
-                "5 Ã¨me ","remettre Ã  0"
+                "1 er ", "2 ème ",
+                "3 ème ", "4 ème ",
+                "5 ème ","remettre à 0"
         };
         AlertDialog.Builder alerDialogBuilder = new AlertDialog.Builder(InterfaceList.this);
         boolean enable = true;
-        alerDialogBuilder.setTitle("Classer par prÃ©fÃ©rence")
+        alerDialogBuilder.setTitle("Classer par préférence")
                 .setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         vote = item ;
@@ -87,7 +87,7 @@ public class InterfaceList extends AppCompatActivity {
                        if(!listAlert.getChildAt(vote).isEnabled()){
                            new AlertDialog.Builder(InterfaceList.this)
                                    .setTitle("Attention")
-                                   .setMessage("vous avez dÃ©ja utilisÃ© ce choix")
+                                   .setMessage("vous avez déjà utilisé ce choix")
                                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                        public void onClick(DialogInterface arg0, int arg1) {
                                        }
