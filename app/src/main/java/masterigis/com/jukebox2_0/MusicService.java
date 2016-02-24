@@ -279,7 +279,30 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
     }
 
     public void playNext(){
-        if(chansons!=null) {
+        // Si on est dans le système de vote  le comportement de l'action avancer enverra un message pour mettre à jour la file de lecture
+        if(vote){
+            Intent intent = new Intent("musicSuivante");
+            intent.putExtra("message","suivant");
+            sendBroadcast(intent);          // On envoie l'événement de fin de la musique
+            player.stop();
+            player.reset();
+        }
+
+        // Sinon le comportement de l'action avancer sera le même
+        else {
+            if (chansons != null) {
+                songPosn++;
+                if (songPosn >= chansons.size()) {
+                    songPosn = 0;
+                }
+                playChanson();
+                musicPlaying = true;
+            }
+        }
+    }
+
+    public void playNextVote(){
+        if (chansons != null) {
             songPosn++;
             if (songPosn >= chansons.size()) {
                 songPosn = 0;

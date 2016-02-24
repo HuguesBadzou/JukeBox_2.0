@@ -38,7 +38,7 @@
         </activity>
 
 
-        <activity android:name="masterigis.com.jukebox2_0.GoogleSignIn"
+        <activity android:name="masterigis.com.jukebox2_0.ModeConnecte.GoogleSignIn"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeFullScreen"/>
 

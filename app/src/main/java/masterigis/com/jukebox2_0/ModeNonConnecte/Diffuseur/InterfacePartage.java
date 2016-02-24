@@ -123,7 +123,9 @@ public class InterfacePartage extends AppCompatActivity {
         });
         // Intent filter pour musique finie
         IntentFilter intentFilter=new IntentFilter("finMusic");
+        IntentFilter intentFilterAvancer=new IntentFilter("musicSuivante");
         registerReceiver((musicFinie), intentFilter);
+        registerReceiver((musicFinie), intentFilterAvancer);
         // Intent filter pour musique finie
 
         registerReceiver(connectionChangedReceiver, connectionfilter);
@@ -170,14 +172,20 @@ public class InterfacePartage extends AppCompatActivity {
     BroadcastReceiver musicFinie=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            creerListeChansons(image_details);
-            musicSrv.setList(array_chansons);
-            musicSrv.setChanson(0);
-            musicSrv.playChanson();
-            ((NewItem)image_details.get(0)).setVote("Vote : 0");
-            Collections.sort(image_details);
 
-            lv1.invalidateViews();
+            if(((NewItem)image_details.get(0)).getVote().compareTo("Vote : 0")!=0) {
+                creerListeChansons(image_details);
+                musicSrv.setList(array_chansons);
+                musicSrv.setChanson(0);
+                musicSrv.playChanson();
+                ((NewItem) image_details.get(0)).setVote("Vote : 0");
+                Collections.sort(image_details);
+                lv1.invalidateViews();
+            }
+            else
+            {
+                musicSrv.playNextVote();
+            }
         }
     };
 

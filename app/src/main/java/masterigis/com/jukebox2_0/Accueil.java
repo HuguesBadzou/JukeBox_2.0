@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import m1geii.com.jukebox2_0.R;
+import masterigis.com.jukebox2_0.ModeConnecte.GoogleSignIn;
 
 public class Accueil extends AppCompatActivity {
 
@@ -28,7 +29,7 @@ public class Accueil extends AppCompatActivity {
         boutonModeNonConnecte.setTypeface(typeface);
 
         // Partie shared preferences
-        infos=this.getSharedPreferences(".siConnecte",MODE_PRIVATE);
+        infos=this.getSharedPreferences(".donneesUtilisateur",MODE_PRIVATE);
         final String siConnecte = infos.getString("etat","");
 
         boutonModeNonConnecte.setOnClickListener(new View.OnClickListener() {

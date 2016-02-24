@@ -47,6 +47,8 @@ public class InterfaceList extends AppCompatActivity {
     Boolean connexionTest=true;
     int vote;
     View row;
+    AlertDialog alertDialog;
+    ListView listAlert ;
     public Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,51 +62,136 @@ public class InterfaceList extends AppCompatActivity {
         initializeWiFiDirect();
         Log.i("msg ", " ProgressDialogConnexion");
         lv1 = (ListView) findViewById(R.id.liste_musiques_votes);
-        lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            final CharSequence[] items = {"0", "1", "2", "3", "4", "5"};
 
+        //modification syteme du vote
+        final CharSequence[] items = {
+                "1 er ", "2 ème ",
+                "3 ème ", "4 ème ",
+                "5 ème ","remettre à 0"
+        };
+        AlertDialog.Builder alerDialogBuilder = new AlertDialog.Builder(InterfaceList.this);
+        boolean enable = true;
+        alerDialogBuilder.setTitle("Classer par préférence")
+                .setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        vote = item ;
+                        listAlert = ((AlertDialog) dialog).getListView();
+
+
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton("Valider", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        String voteList =  newsData.getVote();
+                       if(!listAlert.getChildAt(vote).isEnabled()){
+                           new AlertDialog.Builder(InterfaceList.this)
+                                   .setTitle("Attention")
+                                   .setMessage("vous avez déja utilisé ce choix")
+                                   .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                       public void onClick(DialogInterface arg0, int arg1) {
+                                       }
+                                   }).create().show();
+
+                       }else {
+                           if (voteList.compareTo("Vote : 0") == 0) {
+                               if(vote !=5) {
+                                   listAlert.getChildAt(vote).setEnabled(false);
+                                   listAlert.getChildAt(vote).setSelected(false);
+                                   newsData.setVote("Vote : " + items[vote]);
+                                   row.setBackgroundColor(Color.GREEN);
+                                   lv1.invalidateViews();
+                               }
+                           } else {
+                               int index = 5;
+
+                               if (voteList.compareTo("Vote : "+items[0]) == 0) {
+                                   index =0 ;
+                               } else if (voteList.compareTo("Vote : "+items[1]) == 0) {
+                                   index = 1;
+                               } else if (voteList.compareTo("Vote : "+items[2]) == 0) {
+                                   index = 2;
+                               } else if (voteList.compareTo("Vote : "+items[3]) == 0) {
+                                   index = 3;
+                               } else {
+                                   index = 4;
+                               }
+                               if (vote == 5) {
+                                   newsData.setVote("Vote : " + 0 + "");
+                                   listAlert.getChildAt(vote).setEnabled(true);
+                                   listAlert.getChildAt(vote).setSelected(true);
+                               } else {
+                                   listAlert.getChildAt(vote).setEnabled(false);
+                                   listAlert.getChildAt(vote).setSelected(false);
+                                   newsData.setVote("Vote : " + items[vote] + "");
+
+                               }
+                               listAlert.getChildAt(index).setEnabled(true);
+                               listAlert.getChildAt(index).setSelected(true);
+                               row.setBackgroundColor(Color.GREEN);
+                               // row.setClickable(true);
+                               lv1.invalidateViews();
+                           }
+                       }
+                    }
+                });
+        alertDialog = alerDialogBuilder.create();
+
+        lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
                 Object o = lv1.getItemAtPosition(position);
                 newsData = (NewItem) o;
-                row=v;
-                if (newsData.getVote().endsWith("*")==false) {
-                    new AlertDialog.Builder(InterfaceList.this)
-                        .setTitle(newsData.getTitre())
-                        .setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int item) {
-                                vote = item;
-                            }
-                        })
-                        .setNegativeButton(android.R.string.no, null)
-                        .setPositiveButton("Voter", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface arg0, int arg1) {
-                                if (vote != 0)
-                                {
-                                    newsData.setVote("Vote : " + vote + "");
-                                    row.setBackgroundColor(Color.GREEN);
-                                    // row.setClickable(true);
-                                    lv1.invalidateViews();
+                row = v;
+                if (newsData.getVote().endsWith("*") == false) {
+                    alertDialog.show();
+
+                   // alertDialog.getListView().getChildAt(1).setEnabled(false);
+                   // alertDialog.getListView().getChildAt(1).setSelected(false);
+                   /* new AlertDialog.Builder(InterfaceList.this)
+                            .setTitle(newsData.getTitre())
+                            .setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int item) {
+                                    vote = item;
+                                }
+                            })
+                            .setNegativeButton(android.R.string.no, null)
+                            .setPositiveButton("Voter", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface arg0, int arg1) {
+                                    if (vote != 0) {
+                                        newsData.setVote("Vote : " + vote + "");
+                                        row.setBackgroundColor(Color.GREEN);
+                                        // row.setClickable(true);
+                                        lv1.invalidateViews();
+                                    }
+
                                 }
 
-                            }
-
-                        }).create().show();
+                            }).create().show();*/
                 }
             }
         });
-        btnFlottantPartager = (FloatingActionButton) findViewById(R.id.bouton_flottant_voter);
-        btnFlottantPartager.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String msg1 = new ConvertirListToString().convertirToString(InterfaceList.this);
-                Log.i("msg aaaa", msg1);
-                if (image_details != null && msg1 != "") {
-                    new EnvoyerMsg(oos, msg1).start();
-                }
 
-            }
-        });
-    }
+
+                    btnFlottantPartager=(FloatingActionButton)
+
+                    findViewById(R.id.bouton_flottant_voter);
+
+                    btnFlottantPartager.setOnClickListener(new View.OnClickListener()
+
+                    {
+                        public void onClick (View v){
+                        String msg1 = new ConvertirListToString().convertirToString(InterfaceList.this);
+                        Log.i("msg aaaa", msg1);
+                        if (image_details != null && msg1 != "") {
+                            new EnvoyerMsg(oos, msg1).start();
+                        }
+
+                    }
+                    }
+
+                    );
+                }
 
     private ArrayList getListData() {
         ArrayList<NewItem> results = new ArrayList<NewItem>();

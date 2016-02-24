@@ -57,7 +57,7 @@ public class CustomListAdapter extends BaseAdapter {
         }
 
         holder.headlineView.setText(listData.get(position).getTitre());
-        holder.reporterNameView.setText("By, " + listData.get(position).getArtist());
+        holder.reporterNameView.setText("De, " + listData.get(position).getArtist());
         holder.reportedDateView.setText(listData.get(position).getVote());
         if(holder.reportedDateView.getText().toString().endsWith("*")==true)
             convertView.setBackgroundColor(Color.GREEN);
