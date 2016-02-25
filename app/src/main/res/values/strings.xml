@@ -59,4 +59,10 @@
     <string name="texte_ajout_nouvelle_musique">Ajouter une Musique</string>
     <string name="title_activity_test">Test</string>
 
+    <string name="titre_boite_de_dialogue">Internet Indisponible</string>
+    <!--String Boîte de dialogue-->
+    <string name="message_boite_de_dialogue">Aucune connexion réseau n\'est disponible. Veuillez réessayez ultérieurement</string>
+    <string name="message_boite_de_dialogue_retour_deconnexion">Attention vous allez être deconnecté</string>
+
+
 </resources>

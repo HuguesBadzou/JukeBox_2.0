@@ -1,4 +1,4 @@
-package masterigis.com.jukebox2_0.ModeNonConnecte.Participant;
+package masterigis.com.jukebox2_0.ModeConnecte.ParticipantCo;
 
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -28,6 +28,8 @@ import m1geii.com.jukebox2_0.R;
 
 
 public class InterfaceList extends AppCompatActivity {
+
+
 
     ArrayList image_details = null;
     NewItem newsData;
