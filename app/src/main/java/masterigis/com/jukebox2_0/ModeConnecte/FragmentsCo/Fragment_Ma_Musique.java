@@ -14,10 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import m1geii.com.jukebox2_0.R;
-import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Albums;
-import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Artistes;
-import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Chansons;
-import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Listes_de_Lecture;
 
 // Fragment gérant le sytème d'onglet de l'application
 public class Fragment_Ma_Musique extends Fragment {
@@ -35,10 +31,6 @@ public class Fragment_Ma_Musique extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    /*@Override
-    public void onResume(){
-        super.onResume();
-    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

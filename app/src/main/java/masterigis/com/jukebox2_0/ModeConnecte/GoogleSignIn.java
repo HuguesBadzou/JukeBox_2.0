@@ -3,7 +3,6 @@ package masterigis.com.jukebox2_0.ModeConnecte;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -51,9 +50,6 @@ public class GoogleSignIn extends AppCompatActivity implements GoogleApiClient.O
     String prenomGoogle;
     String dateDeNaissanceGoogle;
     String emailGoogle;
-
-    // Données stockées
-    SharedPreferences pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

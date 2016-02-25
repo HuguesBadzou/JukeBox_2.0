@@ -57,7 +57,7 @@ public class InterfaceList extends AppCompatActivity {
         setTitle("Client");
         image_details = getListData();
 
-        connectionfilter = new IntentFilter(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION); // Indique si  l'Ètat de la connexion Wi-Fi peer to peer a chang√É¬©
+        connectionfilter = new IntentFilter(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION); // Indique si  l'√©tat de la connexion Wi-Fi peer to peer a chang√É∆í√Ç¬©
 
         initializeWiFiDirect();
         Log.i("msg ", " ProgressDialogConnexion");
@@ -65,13 +65,13 @@ public class InterfaceList extends AppCompatActivity {
 
         //modification syteme du vote
         final CharSequence[] items = {
-                "1 er ", "2 Ëme ",
-                "3 Ëme ", "4 Ëme ",
-                "5 Ëme ","remettre ‡ 0"
+                "1 er ", "2 √®me ",
+                "3 √®me ", "4 √®me ",
+                "5 √®me ","remettre √† 0"
         };
         AlertDialog.Builder alerDialogBuilder = new AlertDialog.Builder(InterfaceList.this);
         boolean enable = true;
-        alerDialogBuilder.setTitle("Classer par prÈfÈrence")
+        alerDialogBuilder.setTitle("Classer par pr√©f√©rence")
                 .setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         vote = item ;
@@ -87,7 +87,7 @@ public class InterfaceList extends AppCompatActivity {
                        if(!listAlert.getChildAt(vote).isEnabled()){
                            new AlertDialog.Builder(InterfaceList.this)
                                    .setTitle("Attention")
-                                   .setMessage("vous avez dÈj‡ utilisÈ ce choix")
+                                   .setMessage("Vous avez d√©j√† utilis√© ce choix")
                                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                        public void onClick(DialogInterface arg0, int arg1) {
                                        }
