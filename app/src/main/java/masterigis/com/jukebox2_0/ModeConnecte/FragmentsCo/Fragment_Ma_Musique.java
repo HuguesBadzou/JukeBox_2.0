@@ -86,7 +86,7 @@ public class Fragment_Ma_Musique extends Fragment {
                 case 2:
                     return new Fragment_Chansons();
                 case 3:
-                    return new Fragment_Listes_de_Lecture();
+                    return new Creation_evenement();
             }
             return null;
         }
