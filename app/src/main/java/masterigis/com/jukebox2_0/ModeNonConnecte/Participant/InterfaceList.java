@@ -29,8 +29,6 @@ import m1geii.com.jukebox2_0.R;
 
 public class InterfaceList extends AppCompatActivity {
 
-
-
     ArrayList image_details = null;
     NewItem newsData;
     FloatingActionButton btnFlottantPartager;

@@ -107,6 +107,11 @@
          from https://console.developers.google.com/ -->
     <string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>
 
-    <!-- -->
+    <!-- String Naveck -->
+
+    <string name="titre_boite_de_dialogue">Internet Indisponible</string>
+    <!--String Boîte de dialogue-->
+    <string name="message_boite_de_dialogue">Aucune connexion réseau n\'est disponible. Veuillez réessayez ultérieurement</string>
+    <string name="message_boite_de_dialogue_retour_deconnexion">Attention vous allez être deconnecté</string>
 
 </resources>
