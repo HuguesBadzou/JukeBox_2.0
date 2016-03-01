@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="masterigis.com.jukebox2_0.Uploader_dossier_diffuseur">
+
+    <ListView
+        android:id="@+id/listview_chansons_a_ajouter_dossier_diffuseur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="false" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bouton_flottant_valider_musiques_deposer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_done_white_24dp"
+        app:backgroundTint="#4CAF50"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/listview_chansons_a_ajouter_dossier_diffuseur"
+        android:layout_alignEnd="@+id/listview_chansons_a_ajouter_dossier_diffuseur" />
+
+</RelativeLayout>

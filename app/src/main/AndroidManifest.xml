@@ -76,10 +76,14 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="masterigis.com.jukebox2_0.Mode_Participant"
+            android:name="masterigis.com.jukebox2_0.ModeConnecte.Mode_Participant"
             android:label="@string/title_activity_mode_participantCo"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="masterigis.com.jukebox2_0.ModeConnecte.Uploader_dossier_diffuseur"
+                android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

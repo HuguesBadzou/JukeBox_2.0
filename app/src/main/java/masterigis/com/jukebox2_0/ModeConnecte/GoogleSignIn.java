@@ -63,7 +63,6 @@ public class GoogleSignIn extends AppCompatActivity implements GoogleApiClient.O
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
 
-
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestScopes(new Scope(Scopes.PLUS_LOGIN))
                 .requestEmail()

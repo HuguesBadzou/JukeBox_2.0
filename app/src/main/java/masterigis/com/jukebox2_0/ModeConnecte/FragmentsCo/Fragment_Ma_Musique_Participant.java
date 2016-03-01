@@ -7,8 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +14,13 @@ import android.view.ViewGroup;
 import m1geii.com.jukebox2_0.R;
 
 // Fragment gérant le sytème d'onglet de l'application
-public class Fragment_Ma_Musique extends Fragment {
+public class Fragment_Ma_Musique_Participant extends Fragment {
 
     public static TabLayout mtabLayout;
     public static ViewPager mviewPager;
-    public static int nb_section = 4 ;
-    
-    public Fragment_Ma_Musique(){
+    public static int nb_section = 3 ;
+
+    public Fragment_Ma_Musique_Participant() {
 
     }
 
@@ -31,15 +29,11 @@ public class Fragment_Ma_Musique extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
-        actionBar.setTitle("Ma Musique");
-
-        View v =  inflater.inflate(R.layout.fragment_ma_musique,null);
+        View v =  inflater.inflate(R.layout.fragment_bibliotheque,null);
         mtabLayout = (TabLayout) v.findViewById(R.id.tabs_artistes);
         mviewPager = (ViewPager) v.findViewById(R.id.pager);
 
@@ -77,8 +71,6 @@ public class Fragment_Ma_Musique extends Fragment {
                     return new Fragment_Albums();
                 case 2:
                     return new Fragment_Chansons();
-                case 3:
-                    return new Creation_evenement();
             }
             return null;
         }
@@ -86,7 +78,7 @@ public class Fragment_Ma_Musique extends Fragment {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return nb_section;
+            return 3;
         }
 
         @Override
@@ -94,13 +86,11 @@ public class Fragment_Ma_Musique extends Fragment {
             // Pour modifier les titres des tabs en fonction de la position
             switch (position) {
                 case 0:
-                    return "ARTISTES";
+                    return "Artistes";
                 case 1:
-                    return "ALBUMS";
+                    return "Albums";
                 case 2:
-                    return "CHANSONS";
-                case 3:
-                    return "EVENEMENTS";
+                    return "Chansons";
             }
             return null;
         }

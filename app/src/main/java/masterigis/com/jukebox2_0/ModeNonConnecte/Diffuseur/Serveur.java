@@ -56,14 +56,14 @@ public class Serveur extends AppCompatActivity {
                 String nomWifi;
          /* Alert Dialog Code Start*/
                 AlertDialog.Builder alert = new AlertDialog.Builder(Serveur.this);
-                alert.setTitle("Alert Dialog With EditText"); //Set Alert dialog title here
-                alert.setMessage("Enter Your Name Here"); //Message here
+                alert.setTitle("Changer de nom"); //Set Alert dialog title here
+                alert.setMessage("Entrer votre nom ici"); //Message here
 
                 // Set an EditText view to get user input
                 final EditText input = new EditText(Serveur.this);
                 alert.setView(input);
 
-                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                alert.setPositiveButton("Valider", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         //You will get as string input data in this variable.
                         // here we convert the input to a string and show in a toast.
@@ -80,7 +80,7 @@ public class Serveur extends AppCompatActivity {
 
                     } // End of onClick(DialogInterface dialog, int whichButton)
                 }); //End of alert.setPositiveButton
-                alert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                alert.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         // Canceled.
                         dialog.cancel();

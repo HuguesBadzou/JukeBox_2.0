@@ -114,4 +114,18 @@
     <string name="message_boite_de_dialogue">Aucune connexion réseau n\'est disponible. Veuillez réessayez ultérieurement</string>
     <string name="message_boite_de_dialogue_retour_deconnexion">Attention vous allez être deconnecté</string>
 
+    <!-- Mode Connecté -->
+
+    <!-- Activité créer événement -->
+
+    <string name="titre_alert_dialog_creation_evenement">Création d\'un nouvel événement</string>
+
+    <string name="label_nom_evenement"><font size="15">Nom événement: </font></string>
+    <string name="label_date">Date: </string>
+    <string name="label_mot_de_passe">Mot de passe: </string>
+
+    <string name="hint_nom_evenement"><font size="15">Entrer un nom d\'événement</font></string>
+    <string name="hint_date"><font size="15">jj-mm-aaaa</font></string>
+    <string name="hint_mot_de_passe"><font size="15">Entrer un mot de passe</font></string>
+
 </resources>

@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import m1geii.com.jukebox2_0.R;
-import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Ma_Musique;
+import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Ma_Musique_Diffuseur_Co;
 import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Music_Playback;
 import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Partager_Liste_De_Lecture;
 
@@ -42,7 +42,7 @@ public class Mode_DiffuseurCo extends AppCompatActivity
         Fragment fragmentMaMusique,fragmentControlLecteur;
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
-        fragmentMaMusique = new Fragment_Ma_Musique();
+        fragmentMaMusique = new Fragment_Ma_Musique_Diffuseur_Co();
         fragmentControlLecteur=new Fragment_Music_Playback();
         ft.replace(R.id.mainFrame, fragmentMaMusique)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
@@ -81,12 +81,12 @@ public class Mode_DiffuseurCo extends AppCompatActivity
                 break;
 
             case R.id.bibliotheque_mode_diffuseur:
-                if(currentFragment instanceof Fragment_Ma_Musique){
+                if(currentFragment instanceof Fragment_Ma_Musique_Diffuseur_Co){
                     // On ne le recharge pas
                 }
 
                 else{
-                    fragment = new Fragment_Ma_Musique();
+                    fragment = new Fragment_Ma_Musique_Diffuseur_Co();
                     ft.replace(R.id.mainFrame, fragment)
                             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                             .addToBackStack(null)

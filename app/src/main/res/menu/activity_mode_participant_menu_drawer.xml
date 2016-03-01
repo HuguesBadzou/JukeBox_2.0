@@ -14,7 +14,7 @@
 
         <item
             android:id="@+id/rechercher_evenement"
-            android:icon="@drawable/ic_drawer_albums"
+            android:icon="@drawable/ic_search_dark_gray"
             android:title="@string/option_5_rechercher_evenement" />
 
         <item

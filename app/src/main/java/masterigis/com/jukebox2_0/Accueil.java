@@ -57,6 +57,7 @@ public class Accueil extends AppCompatActivity {
                     b.putExtras(mode);
                     startActivity(b);
                 }
+                //Toast.makeText(getApplicationContext(),"prochainement...",Toast.LENGTH_LONG).show();
             }
         });
     }

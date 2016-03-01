@@ -1,4 +1,4 @@
-package masterigis.com.jukebox2_0;
+package masterigis.com.jukebox2_0.ModeConnecte;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,8 +15,8 @@ import android.view.MenuItem;
 
 
 import m1geii.com.jukebox2_0.R;
-import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Bibliotheque;
-import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Ma_Musique;
+import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Ma_Musique_Participant;
+import masterigis.com.jukebox2_0.ModeConnecte.FragmentsCo.Fragment_Rechercher_Evement;
 import masterigis.com.jukebox2_0.ModeNonConnecte.Fragments.Fragment_Music_Playback;
 import masterigis.com.jukebox2_0.ModeNonConnecte.Participant.Rejoindre_Playlist;
 
@@ -42,7 +42,7 @@ public class Mode_Participant extends AppCompatActivity
         Fragment fragmentBibliotheque,fragmentControlLecteur;
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
-        fragmentBibliotheque = new Fragment_Bibliotheque();
+        fragmentBibliotheque = new Fragment_Ma_Musique_Participant();
         fragmentControlLecteur=new Fragment_Music_Playback();
 
         // Ajout du Fragment contenant  les
@@ -108,11 +108,11 @@ public class Mode_Participant extends AppCompatActivity
                 break;
 
             case R.id.bibliotheque_mode_diffuseur:
-                if(currentFragment instanceof Fragment_Bibliotheque){
+                if(currentFragment instanceof Fragment_Ma_Musique_Participant){
                     // On ne le recharge pas
                 }
                 else {
-                    fragment = new Fragment_Bibliotheque();
+                    fragment = new Fragment_Ma_Musique_Participant();
                     ft.replace(R.id.mainFrame, fragment)
                             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                             .addToBackStack(null)
@@ -123,6 +123,14 @@ public class Mode_Participant extends AppCompatActivity
             case R.id.rejoindre_playlist:
                 Intent i=new Intent (Mode_Participant.this,Rejoindre_Playlist.class);
                 startActivity(i);
+                break;
+
+            case R.id.rechercher_evenement:
+                fragment = new Fragment_Rechercher_Evement();
+                ft.replace(R.id.mainFrame, fragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .addToBackStack(null)
+                        .commit();
                 break;
 
         }

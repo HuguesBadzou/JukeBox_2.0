@@ -20,7 +20,6 @@ tools:context="m1geii.com.testwifip2p.Diffuseur.Serveur">
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:text="Changer le nom "
-            android:layout_below="@+id/nom"
             android:layout_centerHorizontal="true"
             android:textColor="#FFFFFF"
             android:background="@drawable/selector_formes_boutons"/>

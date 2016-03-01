@@ -18,13 +18,14 @@
             android:layout_width="0dip"
             android:layout_weight=".3"
             android:layout_height="wrap_content"
-            android:text="Nom Evenement: "/>
+            android:text="@string/label_nom_evenement"/>
 
         <EditText
             android:id="@+id/titre"
             android:layout_width="0dip"
-            android:layout_weight=".7"
             android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:hint="@string/hint_nom_evenement"
             android:singleLine="true"
             android:imeOptions="actionDone"/>
 
@@ -40,7 +41,7 @@
             android:layout_width="0dip"
             android:layout_weight=".3"
             android:layout_height="wrap_content"
-            android:text="Date: " />
+            android:text="@string/label_date" />
 
         <EditText
             android:id="@+id/date"
@@ -49,6 +50,7 @@
             android:layout_weight=".7"
             android:layout_height="wrap_content"
             android:singleLine="true"
+            android:hint="@string/hint_date"
             android:imeOptions="actionDone"/>
     </LinearLayout>
 
@@ -62,15 +64,16 @@
             android:layout_width="0dip"
             android:layout_weight=".3"
             android:layout_height="wrap_content"
-            android:text="Password: " />
+            android:text="@string/label_mot_de_passe" />
 
 
         <EditText
             android:id="@+id/mdp"
             android:inputType="textPassword"
             android:layout_width="0dip"
-            android:layout_weight=".7"
             android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:hint="@string/hint_mot_de_passe"
             android:singleLine="true"
             android:imeOptions="actionDone"/>
 

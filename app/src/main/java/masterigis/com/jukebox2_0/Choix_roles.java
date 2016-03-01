@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import m1geii.com.jukebox2_0.R;
+import masterigis.com.jukebox2_0.ModeConnecte.Mode_Participant;
 import masterigis.com.jukebox2_0.ModeNonConnecte.Participant.Rejoindre_Playlist;
 
 public class Choix_roles extends AppCompatActivity {
